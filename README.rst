@@ -1,7 +1,7 @@
 peterpy
 ====
 
-Add this context manager around peter's context manager and it will measure how long it took to run:
+Add peter's context manager around your code and it will measure how long it takes to run:
 
 .. code:: python
 
@@ -44,9 +44,9 @@ Usage
 
     class peter():
       """
-      Decorate an iterable object, returning an iterator which acts exactly
-      like the original iterable, but prints a dynamically updating
-      progressbar every time a value is requested.
+    Context manager that will print 
+    the time elapsed while executing the code inside it.
+
       """
 
     def __init__(self,
