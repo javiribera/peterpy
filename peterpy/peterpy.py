@@ -2,6 +2,10 @@ import time
 import sys
 
 class peter:
+    """
+    Context manager that will print 
+    the time elapsed while executing the code inside it.
+    """
         
     def __init__(self,
                  msg="Running",
@@ -9,9 +13,9 @@ class peter:
                  erase_stderr=False):
         """
         Create a context manager that will print 
-        the time elapsed while executing the code inside.
+        the time elapsed while executing the code inside it.
 
-        :param msg: Message to show on standard output.
+        :param msg: Message to show on standard output before running.
                     Default: "Running..."
         :param erase_stdout: If True, ignore everything sent to
                              the standard output inside the context.
