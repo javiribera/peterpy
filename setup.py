@@ -6,7 +6,7 @@ setup(
     description='Print Elapsed TimE Running a piece of Python code ',
 
     # The project's main homepage.
-    url='http://ribera.me',
+    url='https://github.com/javiribera/peterpy',
 
     # Author details
     author='Javier Ribera',
@@ -27,7 +27,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
 
-    packages=find_packages(),
+    packages=['peterpy'],
     
 )
 
