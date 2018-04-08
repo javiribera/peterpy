@@ -43,9 +43,9 @@ class peter:
     def __exit__(self, type, value, traceback):
         elapsed_seconds = time.clock() - self.t
 
-        print('DONE (took %4f seconds)' % elapsed_seconds, flush=True)
-
         # Recover standard output
         sys.stdout = self.stdout
         sys.stderr = self.stderr
+
+        print('DONE (took %4f seconds)' % elapsed_seconds, flush=True)
 
