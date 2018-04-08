@@ -4,7 +4,7 @@ setup(
     name='peterpy',
     version='1.0.0',
     description='Print Elapsed TimE Running a piece of Python code ',
-    license='GPLv3.0'
+    license='GPLv3.0',
 
     # The project's main homepage.
     url='https://github.com/javiribera/peterpy',
@@ -31,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    python_requires='~=3'
+    python_requires='>=3.3, <=3.6',
 
     packages=['peterpy'],
     
