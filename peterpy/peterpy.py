@@ -40,6 +40,8 @@ class peter:
         if self.erase_stderr:
             sys.stderr = None
 
+        return self
+
     def __exit__(self, type, value, traceback):
         elapsed_seconds = time.clock() - self.t
 
