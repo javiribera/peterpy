@@ -25,20 +25,26 @@ class peter:
                              Default: False.
         """
         self.msg = msg
+
         self.erase_stdout = erase_stdout
         self.erase_stderr = erase_stderr
+        self._sys_stdout_write = sys.stdout.write
+        self._sys_stderr_write = sys.stderr.write
         self.stdout = sys.stdout
         self.stderr = sys.stderr
 
     def __enter__(self):
-        self.t = time.clock()
         print('%s... ' % self.msg, flush=True, end='')
 
         # Ignore standard output inside the context
+        def ignore(*args, **kwargs):
+            pass
         if self.erase_stdout:
-            sys.stdout = None
+            sys.stdout.write = ignore
         if self.erase_stderr:
-            sys.stderr = None
+            sys.stderr.write = ignore
+
+        self.t = time.clock()
 
         return self
 
@@ -46,8 +52,8 @@ class peter:
         elapsed_seconds = time.clock() - self.t
 
         # Recover standard output
-        sys.stdout = self.stdout
-        sys.stderr = self.stderr
+        sys.stdout.write = self._sys_stdout_write
+        sys.stderr.write = self._sys_stderr_write
 
         print('DONE (took %4f seconds)' % elapsed_seconds, flush=True)
 
