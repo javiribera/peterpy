@@ -48,10 +48,10 @@ Usage
     the time elapsed while executing the code inside it.
     """
 
-    def __init__(self,
-                 msg="Running",
-                 erase_stdout=False,
-                 erase_stderr=False):
+        def __init__(self,
+                     msg="Running",
+                     erase_stdout=False,
+                     erase_stderr=False):
 
 Parameters
 ~~~~~~~~~~
