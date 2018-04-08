@@ -43,11 +43,10 @@ Usage
 .. code:: python
 
     class peter():
-      """
+    """
     Context manager that will print 
     the time elapsed while executing the code inside it.
-
-      """
+    """
 
     def __init__(self,
                  msg="Running",
