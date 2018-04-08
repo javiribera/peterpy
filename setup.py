@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='print-time',
+    name='peterpy',
     version='1.0.0',
-    description='Print the time elapsed in a code context.',
+    description='Print Elapsed TimE Running a piece of Python code ',
 
     # The project's main homepage.
     url='http://ribera.me',

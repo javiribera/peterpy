@@ -1,7 +1,7 @@
 import time
 import sys
 
-class printtime:
+class peter:
         
     def __init__(self,
                  msg="Running",
