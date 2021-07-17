@@ -44,12 +44,12 @@ class peter:
         if self.erase_stderr:
             sys.stderr.write = ignore
 
-        self.t = time.clock()
+        self.t = time.time()
 
         return self
 
     def __exit__(self, type, value, traceback):
-        elapsed_seconds = time.clock() - self.t
+        elapsed_seconds = time.time() - self.t
 
         # Recover standard output
         sys.stdout.write = self._sys_stdout_write

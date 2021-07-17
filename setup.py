@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 
 setup(
     name='peterpy',
-    version='1.0.1',
+    version='1.1.0',
     description='Print Elapsed TimE Running a piece of Python code ',
     license='GPLv3.0',
 
     # The project's main homepage.
     url='https://github.com/javiribera/peterpy',
-    download_url = 'https://github.com/javiribera/peterpy/archive/1.0.1.tar.gz',
+    download_url = 'https://github.com/javiribera/peterpy/archive/1.1.0.tar.gz',
 
     # Author details
     author='Javier Ribera',
@@ -26,13 +26,13 @@ setup(
         # particular, ensure that you indicate whether you support
         # Python 2, Python 3 or both.
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
-    python_requires='>=3.3, <=3.7',
+    python_requires='>=3.5, <=3.9',
 
     packages=['peterpy'],
     
